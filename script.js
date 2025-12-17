@@ -1,6 +1,3 @@
-/* ===============================
-   1. BESTSELLER CATEGORY FILTER
-   =============================== */
 
 const tabs = document.querySelectorAll('.category-tabs .tab');
 const products = document.querySelectorAll('.product-card');
@@ -8,7 +5,6 @@ const products = document.querySelectorAll('.product-card');
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
 
-    // Active state
     tabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
 
@@ -19,7 +15,7 @@ tabs.forEach(tab => {
       product.style.transform = 'scale(0.96)';
 
       setTimeout(() => {
-        // Demo logic – in real app this would be real data
+       
         if (category === 'rings' || Math.random() > 0.4) {
           product.style.display = 'block';
         } else {
@@ -33,10 +29,6 @@ tabs.forEach(tab => {
   });
 });
 
-
-/* ===============================
-   2. SCROLL REVEAL (INTERSECTION OBSERVER)
-   =============================== */
 
 const revealElements = document.querySelectorAll(
   '.bestseller-section, .collection-gifts-section, .recent-section, .gift-promo-section, .gifts-block, .ethos-block, .future-block, .testimonials-section'
@@ -61,10 +53,6 @@ revealElements.forEach(el => {
   revealObserver.observe(el);
 });
 
-
-/* ===============================
-   3. MOBILE HORIZONTAL SCROLL HINT
-   =============================== */
 
 const horizontalSections = document.querySelectorAll(
   '.product-grid, .recent-grid, .gifts-grid, .testimonial-grid'
